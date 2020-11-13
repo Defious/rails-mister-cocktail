@@ -1,8 +1,9 @@
-<h1>Hello you</h1>
+<h1>Informations</h1>
 
 <%= simple_form_for [ @cocktail, @dose ] do |f| %>
   <%= f.input :description %>
   <%= f.association :ingredient %>
   <%= f.association :cocktail %>
-  <%= f.button :submit %>
+  <%= raise %>
+  <%= f.button :submit, class: "btn-warning" %>
 <% end %>

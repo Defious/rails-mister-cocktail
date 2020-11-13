@@ -1,8 +1,23 @@
-<h1>Your cocktails</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1595981235768-d8f466028cd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+  <div class="container">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+  <div class="descrition">
+    <div>
+      <p>Description</p>
+    </div>
+    <div>
+      <p>Ingredients</p>
+    </div>
+  </div>
+</div>
 
-<%= @cocktail.name %>
 
-
-<%= link_to "Back", cocktails_path %>
-<br>
-<%= link_to "Add doses", new_cocktail_dose_path(@cocktail) %>
+<div class="d-flex justify-content-around mt-3">
+  <div>
+    <h4 class="lign"><%= link_to "Back", cocktails_path %></h4>
+  </div>
+  <div>
+    <h4 class="lign"><%= link_to "Add doses", new_cocktail_dose_path(@cocktail) %></h4>
+  </div>
+</div>
