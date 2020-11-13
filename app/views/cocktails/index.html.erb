@@ -1,12 +1,13 @@
 <h1 class="text-center mb-3">Cocktails</h1>
 
+
 <div class="cards">
   <div class="card-category">
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail.id) do %>
       <div class="card-trip mx-2">
-        <img src="https://images.unsplash.com/photo-1490324120634-0fa86c62d6c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1359&q=80" />
-        <div class="card-trip-infos">
+        <%= cl_image_tag cocktail.photo.key %>
+       <div class="card-trip-infos">
           <h3><%= cocktail.name %></h3>
         </div>
       </div>
@@ -14,7 +15,6 @@
     <% end %>
   </div>
 </div>
-
 
 
 
