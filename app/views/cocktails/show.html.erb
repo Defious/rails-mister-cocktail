@@ -4,11 +4,16 @@
   </div>
   <div class="descrition">
     <div>
-      <p>Description</p>
-      <p> coucou </p>
+      <p><strong>Description</strong></p>
+      <% @cocktail.doses.each do |dose| %>
+        <p><%= dose.description %></p>
+      <% end %>
     </div>
     <div>
-      <p>Ingredients</p>
+      <p><strong>Ingredients</strong></p>
+        <% @cocktail.ingredients.each do |ingredient| %>
+      <p><%= ingredient.name %></p>
+      <% end %>
     </div>
   </div>
 </div>
